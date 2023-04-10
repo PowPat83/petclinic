@@ -5,9 +5,9 @@ pipeline {
             steps {           
                         sh 'pwd'
                         sh 'cp -R helm/* .'
-		        sh 'ls -ltr'
+						sh 'ls -ltr'
                         sh 'pwd'
-                        sh '/usr/local/bin/helm upgrade --install petclinic-app petclinic  --set image.repository=powpat.azurecr.io/cloudfreak/petclinic --set image.tag=1'
+                        sh '/usr/local/bin/helm upgrade --install petclinic-app petclinic  --set image.repository=registry.hub.docker.com/buzz83sg76/petclinic --set image.tag=1'
               			
             }           
         }
